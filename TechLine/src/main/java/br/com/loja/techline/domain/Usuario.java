@@ -30,6 +30,19 @@ public class Usuario {
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	private List<Endereco> enderecos;
 	
+	public Usuario() {
+		
+	}
+	
+	public Usuario(String nome, String email, String cpf, int senha, Long id, List<Endereco> enderecos){
+		this.cpf = cpf;
+		this.email = email;
+		this.nome = nome;
+		this.senha = senha;
+		this.enderecos = enderecos;
+		this.id = id;
+		
+	}
 	
 	
 	
